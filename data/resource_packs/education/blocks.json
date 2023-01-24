@@ -1,0 +1,31 @@
+{
+  "format_version": [ 1, 1, 0 ],
+  "allow" : {
+    "textures": "build_allow", 
+    "sound": "stone"
+  },
+  "deny": {
+    "textures": "build_deny",
+    "sound": "stone"
+  },
+  "chalkboard": {
+    "textures": "wood_big_oak",
+    "sound": "stone"
+  },
+  "border_block": {
+    "textures": "border_block",
+    "sound": "stone"
+  },
+  "camera": {
+    "isotropic": true,
+    "textures": {
+      "up": "camera_top",
+      "down": "camera_top",
+      "north": "camera_back",
+      "south": "camera_front",
+      "west": "camera_side",
+      "east": "camera_side"
+    }
+  }
+  
+}

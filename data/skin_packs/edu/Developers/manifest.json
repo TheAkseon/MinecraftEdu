@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "Developers_SkinPack",
+    "uuid": "48d2af95-255f-43a4-9a1b-1d6ce80336de"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "dee38149-93cb-4efc-ae5f-74c036b421b5"
+    }
+  ],
+  "format_version": 1
+}

@@ -1,0 +1,48 @@
+/********************************************************
+*   (c) Mojang. All rights reserved                     *
+*   (c) Microsoft. All rights reserved.                 *
+*********************************************************/
+
+{
+  "namespace": "edu_global_control",
+
+  "message": {
+    "type": "label",
+    "color": "$body_text_color",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "layer": 2,
+    "shadow": false,
+    "text": "globalPauseScreen.message"
+  },
+
+  "global_control_screen@common.base_screen": {
+    "$screen_content": "edu_global_control.pause_screen_content"
+  },
+
+  "pause_screen_content": {
+    "type": "panel",
+    "$fill_alpha|default": 0.8,
+    "variables": [
+      {
+        "requires": "$is_holographic",
+        "$fill_alpha": 1.0
+      }
+    ],
+
+    "controls": [
+      {
+        "transparentFill": {
+          "type": "image",
+          "texture": "textures/ui/control",
+          "layer": -1,
+          "size": [ "100%", "100%" ],
+          "alpha": "$fill_alpha"
+        }
+      },
+      {
+        "message@edu_global_control.message": {}
+      }
+    ]
+  }
+}

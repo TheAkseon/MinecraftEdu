@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "RedstoneSpecialists_SkinPack",
+    "uuid": "f1a8bd56-6313-418e-8da6-4957a4a7a52b"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "bf931b8c-232b-4c99-ae23-ceba287230e4"
+    }
+  ],
+  "format_version": 1.0
+}

@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "Halloween2015_SkinPack",
+    "uuid": "ca1a5fa0-967e-486b-a21b-7dd19fc2629d"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "ed10ac56-0cd6-4c3c-86a2-75ffcc8993fb"
+    }
+  ],
+  "format_version": 1
+}

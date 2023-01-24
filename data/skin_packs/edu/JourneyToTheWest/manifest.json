@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "JourneytotheWest_SkinPack",
+    "uuid": "ccba1ea2-c7cc-417f-a32c-f4f35b25f8b7"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "062efa69-c742-4ff1-87ca-653d433f656c"
+    }
+  ],
+  "format_version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "CityFolk_SkinPack",
+    "uuid": "acf11539-f3ca-4ac6-b3a9-fdd1c2cf3806"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "42c1e201-867f-42a6-8272-a756bb8deae5"
+    }
+  ],
+  "format_version": 1
+}

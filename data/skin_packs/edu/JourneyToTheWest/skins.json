@@ -1,0 +1,42 @@
+{
+  "skins": [
+    {
+      "localization_name": "JadeEmperor",
+      "geometry": "geometry.JourneytotheWest.JadeEmperor",
+      "texture": "JadeEmperor.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Guanyin",
+      "geometry": "geometry.JourneytotheWest.Guanyin",
+      "texture": "Guanyin.png",
+      "type": "free"
+    },
+	{
+      "localization_name": "MonkeyKing",
+      "geometry": "geometry.JourneytotheWest.MonkeyKing",
+      "texture": "MonkeyKing.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "ShaWujing",
+      "geometry": "geometry.JourneytotheWest.FriarSand",
+      "texture": "sha_wujing.png",
+      "type": "free"
+    },
+	{
+      "localization_name": "Xuangzang",
+      "geometry": "geometry.JourneytotheWest.Xuanzang",
+      "texture": "xuangzang_slim.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "ZhuBajie",
+      "geometry": "geometry.JourneytotheWest.MonkPig",
+      "texture": "zhu_bajie.png",
+      "type": "free"
+    }
+  ],
+  "serialize_name": "JourneytotheWest",
+  "localization_name": "JTTW"
+}

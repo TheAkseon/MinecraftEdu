@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "path": "entities/chicken.json"
+        },
+        {
+            "path": "entities/fox.json"
+        },
+        {
+            "path": "entities/iron_golem.json"
+        },
+        {
+            "path": "entities/panda.json"
+        },
+        {
+            "path": "entities/rabbit.json"
+        },
+        {
+            "path": "entities/squid.json"
+        }
+    ]
+}

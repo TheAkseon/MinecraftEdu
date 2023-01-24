@@ -1,0 +1,80 @@
+{
+  "skins": [
+    {
+      "localization_name": "Bandit",
+      "geometry": "geometry.TownFolk.BanditSlim",
+      "texture": "BanditSlim.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Bard",
+      "geometry": "geometry.TownFolk.Bard",
+      "texture": "Bard.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Farmer",
+      "geometry": "geometry.TownFolk.Farmer",
+      "texture": "Farmer.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Forester",
+      "geometry": "geometry.TownFolk.Forester",
+      "texture": "Forester.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Gardener",
+      "geometry": "geometry.TownFolk.Gardener",
+      "texture": "Gardener.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Monk",
+      "geometry": "geometry.TownFolk.Monk",
+      "texture": "Monk.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "OldLady",
+      "geometry": "geometry.TownFolk.OldLady",
+      "texture": "OldLady.png",
+      "type": "free"
+    },
+    //missing
+    {
+      "localization_name": "OldMan",
+      "geometry": "geometry.TownFolk.OldMan",
+      "texture": "OldMan.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Shopkeeper",
+      "geometry": "geometry.TownFolk.ShopkeeperSlim",
+      "texture": "ShopkeeperSlim.png",
+      "type": "free"
+    },
+    //missing
+    {
+      "localization_name": "Rogue",
+      "geometry": "geometry.TownFolk.Rogue",
+      "texture": "Rogue.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "TownCrier",
+      "geometry": "geometry.TownFolk.TownCrier",
+      "texture": "TownCrier.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Townswoman",
+      "geometry": "geometry.TownFolk.Townswoman",
+      "texture": "Townswoman.png",
+      "type": "free"
+    }
+  ],
+  "serialize_name": "TownFolk",
+  "localization_name": "TownFolk"
+}

@@ -1,0 +1,24 @@
+!!! x86 Version can ONLY be used for the 32 Bit Versions of the game!
+Loading mee.ptr
+Loaded mee.ptr!
+
+Pointer Path: 23d4ca0 > 18 > 4 > 0 > 5c > 2c > 2c
+
+
+Please open Minecraft Education Edition
+MCEE Window Handle: 130548
+MCEE Process ID: 6e0
+MCEE Process Handle: f0
+MCEE Base Addr: 70000
+Waiting for game to Initalize.
+Pointer 1: 2444ca0 == 7aac938
+Pointer 1: 7aac950 == 12aba200
+Pointer 2: 12aba204 == 16a85708
+Pointer 3: 16a85708 == 13122e90
+Pointer 4: 13122eec == 13122ec8
+Pointer 5: 13122ef4 == 11708da8
+Waiting for login screen.
+Trying login stage 6...
+Trying login stage 8...
+
+Blessed Be!

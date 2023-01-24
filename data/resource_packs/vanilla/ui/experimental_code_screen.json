@@ -1,0 +1,500 @@
+/********************************************************
+*   (c) Mojang. All rights reserved                     *
+*   (c) Microsoft. All rights reserved.                 *
+*********************************************************/
+{
+  "namespace": "experimental_code",
+
+  "camera_button@common.button": {
+    "size": [ 18, 18 ],
+    "layer": 3,
+    "pressed_control": "hover",
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "texture": "$default_image"
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "$hover_image"
+        }
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.camera_turn",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "camera_turn.is_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "resize_left_button@code.toolbar_button": {
+    "$default_image": "textures/ui/arrow_l_default",
+    "$hover_image": "textures/ui/arrow_l_hover"
+  },
+
+  "resize_right_button@code.toolbar_button": {
+    "$default_image": "textures/ui/arrow_r_default",
+    "$hover_image": "textures/ui/arrow_r_hover"
+  },
+
+  "menu_button_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "menu_icon@common.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "texture": "textures/ui/hamburger_icon",
+                "size": [ 13, 13 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "return_button_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "return_icon@common.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "texture": "textures/ui/x_dropdown_default",
+                "size": [ 9, 9 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "code_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "chooser@code.editor_chooser": {} },
+      { "webview@code.webview": {} },
+      { "progress@code.webview_progress": {} }
+    ]
+  },
+
+  "parent_relative_panel@common.dialog_background_hollow_4": {
+    "$child_control|default": "common.empty_panel",
+
+    "controls": [
+      {
+        "content_background@code.code_screen_content_background": {
+          "size": [ "100% - 16px", "100% - 16px" ],
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      },
+      {
+        "side_toolbar_left@side_toolbar_panel": {
+          "ignored": "(not $dynamic_window)",
+          "offset": [ -12, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_name": "#is_right",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "side_toolbar_right@side_toolbar_panel": {
+          "ignored": "(not $dynamic_window)",
+          "offset": [ 12, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "bindings": [
+            {
+              "binding_name": "#is_left",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "prevent_dismiss_region@code.prevent_dismiss_region": {}
+      }
+    ]
+  },
+
+  "side_toolbar_button_panel@common.empty_panel": {
+    "size": [ 10, 10 ],
+    "controls": [
+      {
+        "button@$toolbar_button": {
+          "$pressed_button_name": "$press_button_name",
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      }
+    ],
+    "$button_visibility_binding|default": "none",
+    "$button_visibility_binding_type|default": "global",
+    "bindings": [
+      {
+        "binding_name": "$button_visibility_binding",
+        "binding_type": "$button_visibility_binding_type",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "side_toolbar_panel@common.dialog_background_opaque": {
+    "size": [ 14, "100%c + 6px" ],
+    "controls": [
+      {
+        "side_toolbar": {
+          "layer": 1,
+          "offset": [ 2, 0 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "left_expand@side_toolbar_button_panel": {
+                "$button_visibility_binding": "#show_split_right",
+                "$press_button_name": "button.maximize",
+                "$toolbar_button": "resize_left_button"
+              }
+            },
+            {
+              "left_shrink@side_toolbar_button_panel": {
+                "$button_visibility_binding": "#show_full_left",
+                "$press_button_name": "button.restore",
+                "$toolbar_button": "resize_left_button"
+              }
+            },
+            {
+              "right_expand@side_toolbar_button_panel": {
+                "$button_visibility_binding": "#show_split_left",
+                "$press_button_name": "button.maximize",
+                "$toolbar_button": "resize_right_button"
+              }
+            },
+            {
+              "right_shrink@side_toolbar_button_panel": {
+                "$button_visibility_binding": "#show_full_right",
+                "$press_button_name": "button.restore",
+                "$toolbar_button": "resize_right_button"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "code_screen_panel_base@experimental_code.parent_relative_panel": {
+    "$child_control": "experimental_code.code_screen_content"
+  },
+
+  "menu_sub_button": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 5,
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "padded_label@common.empty_panel": {
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "sub_button_text@common_buttons.dark_text_button": {
+                "size": [ "100%", 14 ],
+                "focus_identifier": "$pressed_button_name",
+                "$button_text": "$menu_sub_button_text"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "split_padding@common.empty_panel": {
+    "size": "$pad_size",
+    "controls": [
+      {
+        "position_display@hud.player_position": {
+          "anchor_from": "$position_anchor",
+          "anchor_to": "$position_anchor"
+        }
+      },
+      {
+        "vertical_toolbar_panel": {
+          "layer": 1,
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 20, "100%c" ],
+          "offset": "$menu_offset",
+          "anchor_from": "$menu_anchor",
+          "anchor_to": "$menu_anchor",
+          "controls": [
+            {
+              "return_button@common_buttons.light_content_button": {
+                "anchor_from": "$menu_anchor",
+                "anchor_to": "$menu_anchor",
+                "size": [ "100%", 20 ],
+                "$pressed_button_name": "button.menu_exit",
+                "$button_content": "experimental_code.return_button_content"
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ "100%", 2 ]
+              }
+            },
+            {
+              "menu_button@common_buttons.light_content_button": {
+                "anchor_from": "$menu_anchor",
+                "anchor_to": "$menu_anchor",
+                "size": [ "100%", 20 ],
+                "$pressed_button_name": "button.menu_toggle",
+                "$button_content": "experimental_code.menu_button_content"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu_sub_buttons_panel": {
+          "type": "stack_panel",
+          "anchor_from": "$menu_anchor",
+          "anchor_to": "$menu_anchor",
+          "offset": "$sub_menu_offset",
+          "orientation": "vertical",
+          "size": [ "100% - 8px", "100%c" ],
+          "max_size": [ 100, 24 ],
+          "bindings": [
+            {
+              "binding_name": "#show_menu",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "restart_button@menu_sub_button": {
+                "$pressed_button_name": "button.reset",
+                "$menu_sub_button_text": "Restart"
+              }
+            },
+            {
+              "flip_side_left_button@menu_sub_button": {
+                "ignored": "(not $dynamic_window)",
+                "$pressed_button_name": "button.split_left",
+                "$menu_sub_button_text": "Flip Code Window",
+                "bindings": [
+                  {
+                    "binding_name": "#show_split_right",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "flip_side_right_button@menu_sub_button": {
+                "ignored": "(not $dynamic_window)",
+                "$pressed_button_name": "button.split_right",
+                "$menu_sub_button_text": "Flip Code Window",
+                "bindings": [
+                  {
+                    "binding_name": "#show_split_left",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "camera_control_button_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 5, -5 ],
+          "size": [ 60, 60 ],
+          "controls": [
+            {
+              "camera_up_button@experimental_code.camera_button": {
+                "size": [ 18, 18 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$default_image": "textures/ui/up_chevron",
+                "$hover_image": "textures/ui/up_chevron",
+                "property_bag": {
+                  "#direction": "up"
+                }
+              }
+            },
+            {
+              "camera_down_button@experimental_code.camera_button": {
+                "size": [ 18, 18 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$default_image": "textures/ui/dropdown_chevron",
+                "$hover_image": "textures/ui/dropdown_chevron",
+                "property_bag": {
+                  "#direction": "down"
+                }
+              }
+            },
+            {
+              "camera_left_button@experimental_code.camera_button": {
+                "size": [ 18, 18 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "$default_image": "textures/ui/chevron_grey_left",
+                "$hover_image": "textures/ui/chevron_grey_left",
+                "property_bag": {
+                  "#direction": "left"
+                }
+              }
+            },
+            {
+              "camera_right_button@experimental_code.camera_button": {
+                "size": [ 18, 18 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$default_image": "textures/ui/chevron_grey_right",
+                "$hover_image": "textures/ui/chevron_grey_right",
+                "property_bag": {
+                  "#direction": "right"
+                }
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_camera_button_control",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "camera_control_input_panel": {
+          "ignored": "(not $enable_camera_gesture_control)",
+          "type": "input_panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "100%", "100%" ],
+          "gesture_tracking_button": "button.player_turn",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.player_turn",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#gesture_update",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$split_visibility",
+        "binding_condition": "always",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "variable_panel": {
+    "size": [ "100%", "100%" ],
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    // Control the position and size of the window by toggling visibility bindings
+    // to have half the panel on the left, only the right padding is visible, for full screen no padding is used, in all cases the content fills the remaining space
+    "controls": [
+      {
+        "pad_left_big@experimental_code.split_padding": {
+          "$pad_size": [ "50%", "100%" ],
+          "$position_anchor": "top_right",
+          "$menu_anchor": "top_left",
+          "$menu_offset": [ 4, 4 ],
+          "$sub_menu_offset": [ 4, 46 ],
+          "$split_visibility": "#show_split_right"
+        }
+      },
+      {
+        "pad_left_small@experimental_code.split_padding": {
+          "$pad_size": [ "10%", "100%" ],
+          "$position_anchor": "top_right",
+          "$menu_anchor": "top_left",
+          "$menu_offset": [ 4, 4 ],
+          "$sub_menu_offset": [ 4, 46 ],
+          "$split_visibility": "#show_full_right"
+        }
+      },
+      {
+        "content@$content": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "pad_right_big@experimental_code.split_padding": {
+          "$pad_size": [ "50%", "100%" ],
+          "$position_anchor": "top_left",
+          "$menu_anchor": "top_right",
+          "$menu_offset": [ -4, 4 ],
+          "$sub_menu_offset": [ -4, 46 ],
+          "$split_visibility": "#show_split_left"
+        }
+      },
+      {
+        "pad_right_small@experimental_code.split_padding": {
+          "$pad_size": [ "10%", "100%" ],
+          "$position_anchor": "top_left",
+          "$menu_anchor": "top_right",
+          "$menu_offset": [ -4, 4 ],
+          "$sub_menu_offset": [ -4, 46 ],
+          "$split_visibility": "#show_full_left"
+        }
+      }
+    ]
+  },
+
+  "code_screen_variable_panel": {
+    "type": "panel",
+    "$content": "experimental_code.code_screen_panel_base",
+    "controls": [
+      { "codebuilder@experimental_code.variable_panel": {} }
+    ]
+  }
+}

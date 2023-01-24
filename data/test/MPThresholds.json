@@ -1,0 +1,201 @@
+{
+    "Scenarios": [{
+        "Scenario id": "mp-flatworld",
+        "Owning team": "System Engineering",
+        "Platforms": [{"Platform id": "Android",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 59.652
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 31.667
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.074
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.263
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.545
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 7.145
+                    }
+                ]
+            },
+            {"Platform id": "NX",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 0.02
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 0.02
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.02
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.02 
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.02
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 0.02
+                    }
+                ]
+            },
+            {"Platform id": "Xbox",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 31.077
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 9.257
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.025
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.210 
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.267
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 1.395
+                    }
+                ]
+            },
+            {
+                "Platform id": "Windows10",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 21.942
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 10.061
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.038
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.115 
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.170
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 0.542
+                    }]
+            },
+            {"Platform id": "iOS",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 20.919
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 16.798
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.019
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.103 
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.177
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 0.888
+                    }
+                ]
+            },
+            {"Platform id": "OSX",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 0.05
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 0.05
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.05
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.05
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.05
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 0.05
+                    }
+                ]
+            }
+        ]
+        },
+        {"Scenario id": "mp-scenario-example",
+        "Owning team": "System Engineering",
+        "Platforms": [{
+                "Platform id": "Android",
+                "Microprofiler labels": [{
+                        "Label": "MinecraftGame::update",
+                        "Metric target value": 21.942
+                    },
+                    {
+                        "Label": "MinecraftGame::updateGraphics",
+                        "Metric target value": 10.061
+                    },
+                    {
+                        "Label": "MinecraftGame::reloadMaterials",
+                        "Metric target value": 0.038
+                    },
+                    {
+                        "Label": "MinecraftGame::tickInput",
+                        "Metric target value": 0.115 
+                    },
+                    {
+                        "Label": "ScreenRenderBatch::update",
+                        "Metric target value": 0.170
+                    },
+                    {
+                        "Label": "Level::tick",
+                        "Metric target value": 0.542
+                    }
+                ]
+            }]
+        }
+    ]
+}

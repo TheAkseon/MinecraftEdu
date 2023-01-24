@@ -1,0 +1,23 @@
+{
+  "header": {
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "name": "TownFolk_SkinPack",
+    "uuid": "a7df1b9a-5d81-4130-a9f8-5aa362247739"
+  },
+  "modules": [
+    {
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "type": "skin_pack",
+      "uuid": "e6d381e5-144f-4b57-921d-4a36916c7a69"
+    }
+  ],
+  "format_version": 1.0
+}

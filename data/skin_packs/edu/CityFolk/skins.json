@@ -1,0 +1,78 @@
+{
+  "skins": [
+    {
+      "localization_name": "King",
+      "geometry": "geometry.CityFolk.King",
+      "texture": "King.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Queen",
+      "geometry": "geometry.CityFolk.Queen",
+      "texture": "Queen.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Mage",
+      "geometry": "geometry.CityFolk.Mage",
+      "texture": "Mage.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Baker",
+      "geometry": "geometry.CityFolk.Baker",
+      "texture": "Baker.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Baron",
+      "geometry": "geometry.CityFolk.Baron",
+      "texture": "Baron.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Baroness",
+      "geometry": "geometry.CityFolk.Baroness",
+      "texture": "Baroness.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Postman",
+      "geometry": "geometry.CityFolk.Postman",
+      "texture": "Postman.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Victorian",
+      "geometry": "geometry.CityFolk.Victorian",
+      "texture": "Victorian.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Shoemaker",
+      "geometry": "geometry.CityFolk.Shoemaker",
+      "texture": "Shoemaker.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Watchman",
+      "geometry": "geometry.CityFolk.Watchman",
+      "texture": "Watchman.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Carpenter",
+      "geometry": "geometry.CityFolk.Carpenter",
+      "texture": "Carpenter.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "Barman",
+      "geometry": "geometry.CityFolk.Barman",
+      "texture": "Barman.png",
+      "type": "free"
+    }
+  ],
+  "serialize_name": "CityFolk",
+  "localization_name": "CityFolk"
+}
